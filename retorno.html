@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Retorno do TikTok - PostaAí</title><link rel="stylesheet" href="estilo.css"></head><body>
+<h1>Conectando ao PostaAí…</h1>
+<p id="msg">Voltando para o aplicativo no seu computador. Se nada acontecer, o PostaAí precisa estar aberto neste computador (<code>localhost:3000</code>).</p>
+<p lang="en">Returning to the app running on your computer. If nothing happens, PostaAí must be running on this computer.</p>
+<script>
+// Página de retorno do OAuth do TikTok (o TikTok só aceita https). Só repassa o código ao app local do autor.
+(function () {
+  var destino = 'http://localhost:3000/api/tiktok/retorno' + window.location.search;
+  window.location.replace(destino);
+})();
+</script>
+</body></html>
